@@ -13,4 +13,8 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Examen_T1_Calidad\Examen_T1_Calidad.csproj" />
+  </ItemGroup>
+
 </Project>

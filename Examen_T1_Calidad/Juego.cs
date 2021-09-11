@@ -51,5 +51,9 @@ namespace Examen_T1_Calidad
         {
             return "";
         }
+        public string ValidarGanador(string nombre, string tipoCarta)
+        {
+            return "";
+        }
     }
 }
