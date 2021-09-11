@@ -11,16 +11,24 @@ namespace PokerTest
         [Test]
         public void PokerCaso01()
         {
-            var juego = new Juego();
-            juego.cantidadJugadores(1);
-            Assert.Throws(typeof(Exception), () => juego.cantidadJugadores(2));
+            var test = new ExceptionTestClass();
+            Assert.Throws(typeof(Exception), () => test.CantidadJugadores(1));
         }
         [Test]
         public void PokerCaso02()
         {
-            var juego = new Juego();
-            juego.cantidadJugadoresMax();
-            Assert.Throws(typeof(Exception), () => juego.numeroDeJugadores(5));
+            var test = new ExceptionTestClass();
+            Assert.Throws(typeof(Exception), () => test.CantidadJugadores(6));
+        }
+        [Test]
+        public void PokerCaso03()
+        {
+            var jugador = new List<Jugador>();
+            jugador.Add(new Jugador() { Nombre = "Jugador1", TipoCarta = "1 espadas" });
+            jugador.Add(new Jugador() { Nombre = "Jugador2", TipoCarta = "1 espadas" });
+
+            var t = new ExceptionTestClass();
+            Assert.Throws(typeof(Exception), () => t.ComprobarCartasIguales(jugador));
         }
     }
 }

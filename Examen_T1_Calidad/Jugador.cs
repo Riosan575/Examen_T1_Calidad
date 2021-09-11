@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Examen_T1_Calidad
 {
-    class Jugador
+    public class Jugador
     {
         public string Nombre { get; set; }
-        public int numCart { get; set; }
+        public string TipoCarta { get; set; }
     }
 }
