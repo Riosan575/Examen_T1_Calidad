@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Examen_T1_Calidad
 {
-    public class Poker
+    public class Juego
     {
 
     }

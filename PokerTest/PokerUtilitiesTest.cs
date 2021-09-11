@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Examen_T1_Calidad;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,13 +9,18 @@ namespace PokerTest
     class PokerUtilitiesTest
     {
         [Test]
-        public void VerGanadorCaso01()
+        public void PokerCaso01()
         {
-            var ganador = new Ganador(new List<Jugador>());
-            jugador.Eleccion = "Tijera";
-            jugador2.Eleccion = "Papel";
-            var result = ganador.VerGanador(jugador, jugador2);
-            Assert.AreEqual("gana jugador 1", result);
+            var juego = new Juego();
+            juego.cantidadJugadores(1);
+            Assert.Throws(typeof(Exception), () => juego.cantidadJugadores(2));
+        }
+        [Test]
+        public void PokerCaso02()
+        {
+            var juego = new Juego();
+            juego.cantidadJugadoresMax();
+            Assert.Throws(typeof(Exception), () => juego.numeroDeJugadores(5));
         }
     }
 }

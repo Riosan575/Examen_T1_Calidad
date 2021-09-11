@@ -8,6 +8,5 @@ namespace Examen_T1_Calidad
     {
         public string Nombre { get; set; }
         public int numCart { get; set; }
-        public int numCart { get; set; }
     }
 }
